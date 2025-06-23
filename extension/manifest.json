@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "leeterz question counter",
+  "version": "1.0",
+  "description": "counts unique accepted lc problems solved today",
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": [
+    "https://leetcode.com/submissions/*",
+    "http://localhost:5000/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://leetcode.com/submissions*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_title": "leeterz-question-counter"
+  }
+}
