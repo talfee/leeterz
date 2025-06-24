@@ -32,7 +32,8 @@ function getTodayAccepted() {
 }
 
 function sendToBackend(data) {
-  fetch("http://localhost:5000/api/update-today", {
+  // fetch("http://localhost:5000/api/update-today", {
+  fetch("https://localhost:5000/api/update-today", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     credentials: "include",

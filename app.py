@@ -9,6 +9,8 @@ from db import get_conn
 
 app = Flask(__name__)
 # CORS(app)  
+app.config['SESSION_COOKIE_SAMESITE'] = 'None'
+app.config['SESSION_COOKIE_SECURE'] = True
 CORS(app, supports_credentials=True)
 app.secret_key = 'replace_me'
 

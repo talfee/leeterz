@@ -59,3 +59,5 @@ sets session cookie for browser
 - open lc submissions page
 matches pattern in manifest.json will run content.js. sends data to api/update-today
  - view results in leaderboard
+
+another oops: i used the wrong interpreter haha, not the venv
