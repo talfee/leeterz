@@ -8,7 +8,8 @@ from db import get_conn
 
 
 app = Flask(__name__)
-CORS(app)  
+# CORS(app)  
+CORS(app, supports_credentials=True)
 app.secret_key = 'replace_me'
 
 @app.route('/')

@@ -35,6 +35,7 @@ function sendToBackend(data) {
   fetch("http://localhost:5000/api/update-today", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
+    credentials: "include",
     body: JSON.stringify(data)
   })
     .then(res => res.json())
