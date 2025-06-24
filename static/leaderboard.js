@@ -19,3 +19,5 @@ async function loadLeaderboard() {
     list.appendChild(li);
   });
 }
+
+document.addEventListener('DOMContentLoaded', loadLeaderboard);
