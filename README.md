@@ -41,5 +41,9 @@ work session 3
 https://werkzeug.palletsprojects.com/en/stable/utils/#module-werkzeug.security
 
 goals:
-- multiple user login
+- multiple user login:
+1. profile page
+2. add friends button (to search for friends via username)
+
 - create leaderboard
+

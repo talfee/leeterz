@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, session, render_template
+from flask import Flask, request, jsonify, session, render_template, redirect
 from flask_cors import CORS
 from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import date
@@ -99,8 +99,8 @@ def update_today():
         conn.commit()
     return jsonify({'status': 'ok'})
 
-@app.route('/leaderboard')
-def leaderboard():
+@app.route('/api/leaderboard')
+def leaderboard_data():
     if 'user_id' not in session:
         return jsonify({'error': 'Unauthorized'}), 401
     today = date.today().isoformat()
@@ -123,13 +123,13 @@ def leaderboard():
     board = [{'username': r['username'], 'count': r['count']} for r in rows]
     return jsonify(board)
 
-@app.route('/leaderboard-page')
+@app.route('/leaderboard')
 def leaderboard_page():
     if 'user_id' not in session:
         return redirect('/')
     return render_template('leaderboard.html')
 
-@app.route('/profile-page')
+@app.route('/profile')
 def profile_page():
     if 'user_id' not in session:
         return redirect('/')

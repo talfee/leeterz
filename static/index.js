@@ -10,6 +10,9 @@ async function login() {
   });
   const data = await res.json();
   alert(data.message || data.error);
+  if (res.ok && data.message) {
+    window.location.href = '/leaderboard';
+  } 
 }
 
 async function register() {

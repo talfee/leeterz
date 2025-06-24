@@ -1,5 +1,5 @@
 async function loadLeaderboard() {
-  const res = await fetch('/leaderboard', {
+  const res = await fetch('/api/leaderboard', {
     credentials: 'include',
   });
 
