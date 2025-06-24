@@ -27,7 +27,7 @@ work session 2:
 https://flask.palletsprojects.com/en/stable/quickstart/#sessions
 the repo i referenced for flask logins: 
 https://github.com/partner0307/flask-login-system?
-- did an oopsie by not having venv on
+- dumb mistakes: did an oopsie by not having venv on, had an enter key on postman causing a 405 error
 
 rundown:
 in powershell
@@ -38,3 +38,8 @@ in powershell
 got registration working
 
 work session 3
+https://werkzeug.palletsprojects.com/en/stable/utils/#module-werkzeug.security
+
+goals:
+- multiple user login
+- create leaderboard

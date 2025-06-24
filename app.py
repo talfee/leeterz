@@ -1,11 +1,10 @@
-from flask import Flask, request, jsonify, session
+from flask import Flask, request, jsonify, session, render_template
 from flask_cors import CORS
 from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import date
 import json
 import sqlite3
-
-from db import get_conn, init_db
+from db import get_conn
 
 
 app = Flask(__name__)
@@ -13,8 +12,8 @@ CORS(app)
 app.secret_key = 'replace_me'
 
 @app.route('/')
-def index():
-    return jsonify({'status': 'running'})
+def home():
+    return render_template('index.html')
 
 
 @app.route('/register', methods=['POST'])
@@ -124,10 +123,28 @@ def leaderboard():
     board = [{'username': r['username'], 'count': r['count']} for r in rows]
     return jsonify(board)
 
+@app.route('/leaderboard-page')
+def leaderboard_page():
+    if 'user_id' not in session:
+        return redirect('/')
+    return render_template('leaderboard.html')
+
+@app.route('/profile-page')
+def profile_page():
+    if 'user_id' not in session:
+        return redirect('/')
+    return render_template('profile.html')
+
+
 #troubleshoot
 @app.route('/routes')
 def show_routes():
     return jsonify([str(rule) for rule in app.url_map.iter_rules()])
+
+@app.route('/whoami')
+def whoami():
+    return jsonify({'user_id': session.get('user_id')})
+
 
 def index():
     return jsonify({'status': 'running'})
