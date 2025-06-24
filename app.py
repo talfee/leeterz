@@ -8,9 +8,8 @@ from db import get_conn
 
 
 app = Flask(__name__)
-# CORS(app)  
 app.config['SESSION_COOKIE_SAMESITE'] = 'None'
-app.config['SESSION_COOKIE_SECURE'] = True
+app.config['SESSION_COOKIE_SECURE'] = False # Set to True if using HTTPS
 CORS(app, supports_credentials=True)
 app.secret_key = 'replace_me'
 
@@ -20,8 +19,7 @@ def home():
 
 
 @app.route('/register', methods=['POST'])
-def register():
-    print("PRINT THIS IF REGISTER IS CALLED")
+def register(): 
     data = request.get_json() or {}
     username = data.get('username')
     password = data.get('password')
@@ -146,7 +144,10 @@ def show_routes():
 
 @app.route('/whoami')
 def whoami():
-    return jsonify({'user_id': session.get('user_id')})
+    return jsonify({
+        'user_id': session.get('user_id'),
+        'status': 'authenticated' if 'user_id' in session else 'unauthenticated'
+    })
 
 
 def index():
@@ -154,6 +155,4 @@ def index():
 
 
 if __name__ == '__main__':
-    print("APP.PY RUNNING")
-    print(app.url_map)
-    app.run(debug=True)
+    app.run(debug=True, host='localhost')

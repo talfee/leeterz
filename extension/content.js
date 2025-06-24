@@ -1,4 +1,4 @@
-// console.log("content.js loaded");
+console.log("content.js loaded");
 
 let username = localStorage.getItem("leetcode_username");
 if (!username) {

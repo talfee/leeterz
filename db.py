@@ -13,7 +13,6 @@ def get_conn():
         conn.close()
 
 def init_db():
-    print("!!!DB INITIALIZED")
     with get_conn() as conn:
         conn.execute(
             """CREATE TABLE IF NOT EXISTS users (
