@@ -1,5 +1,12 @@
 // console.log("content.js loaded");
 
+let username = localStorage.getItem("leetcode_username");
+if (!username) {
+  username = prompt("Enter your Leetcode username:");
+  localStorage.setItem("leetcode_username", username);
+}
+
+
 function isToday(text) {
   return !text.includes("day") && !text.includes("week");
 }

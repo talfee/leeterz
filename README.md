@@ -2,7 +2,7 @@
 leetcode x stompers webapp
 
 # resources compilation (chronological diary)
- day 1:
+ work session 1:
 - learning how to use flask. created a venv. 
 starter flask code:
 https://www.geeksforgeeks.org/python/flask-creating-first-simple-application/
@@ -14,5 +14,27 @@ https://www.youtube.com/watch?v=y17RuWkWdn8&ab_channel=WebDevSimplified
 https://developer.chrome.com/docs/extensions/reference/manifest#inject-a-content-script
 https://developer.chrome.com/docs/extensions/develop/concepts/content-scripts#functionality
 https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+- created a working chrome extension reads the leetcode submissions page and sends data to flask backend
+ 
+summary:
+right now, i can navigate to my own lc submissions and upon the submissions page loading, the extension automatically runs to collect the leetcodes i did today.
 
+next steps:
+- multiple users can log in, add eachother as friends, and see eachother on the leaderboard
 
+work session 2:
+- working on log in and authentication. chatgpt suggested i use "Flask’s session management and Werkzeug’s password hashing" for minimal dependencies. i chose to go this route since i wanted this to be a simple project
+https://flask.palletsprojects.com/en/stable/quickstart/#sessions
+the repo i referenced for flask logins: 
+https://github.com/partner0307/flask-login-system?
+- did an oopsie by not having venv on
+
+rundown:
+in powershell
+- venv\Scripts\activate
+- $env:FLASK_APP = "app.py"
+- flask run 
+
+got registration working
+
+work session 3
