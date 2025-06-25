@@ -61,3 +61,6 @@ matches pattern in manifest.json will run content.js. sends data to api/update-t
  - view results in leaderboard
 
 another oops: i used the wrong interpreter haha, not the venv
+
+my goal:
+- get the lc submissions working with the leaderboard

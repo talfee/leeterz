@@ -134,7 +134,14 @@ def leaderboard_page():
 def profile_page():
     if 'user_id' not in session:
         return redirect('/')
-    return render_template('profile.html')
+    with get_conn() as conn:
+        cur = conn.execute(
+            'SELECT username FROM users WHERE id=?',
+            (session['user_id'],)
+        )
+        row = cur.fetchone()
+        username = row['username'] if row else ''
+    return render_template('profile.html', username=username)
 
 
 #troubleshoot

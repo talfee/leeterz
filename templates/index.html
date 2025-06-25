@@ -1,3 +1,4 @@
+<!-- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Jomolhari&family=Pixelify+Sans:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="../static/styles.css">
+  </head>
 
 <body>
   <h1>Login</h1>
@@ -20,6 +22,50 @@
   <input id="reg-password" type="password" placeholder="New Password"><br>
   <button onclick="register()">Register</button>
 
-  <script src="/static/index.js"></script>
+  
+  <script src="../static/index.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LEETERZ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Jomolhari&family=Pixelify+Sans:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <!-- your styles -->
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+  <div class="page-label">Homepage</div>
+
+  <div class="centered-container">
+    <h1 class="site-title">LEETERZ</h1>
+
+    <section class="form-section">
+      <h2>Login</h2>
+      <input id="username" placeholder="Username">
+      <input id="password" type="password" placeholder="Password">
+      <button onclick="login()">Login</button>
+    </section>
+
+    <section class="form-section">
+      <h2>Register</h2>
+      <input id="reg-username" placeholder="New Username">
+      <input id="reg-password" type="password" placeholder="New Password">
+      <button onclick="register()">Register</button>
+    </section>
+  </div>
+
+  <script src="../static/index.js"></script>
 </body>
 </html>

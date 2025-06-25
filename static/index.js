@@ -1,3 +1,4 @@
+
 async function login() {
   const res = await fetch('/login', {
     method: 'POST',
@@ -9,7 +10,7 @@ async function login() {
     })
   });
   const data = await res.json();
-  alert(data.message || data.error);
+  // alert(data.message || data.error);
   if (res.ok && data.message) {
     window.location.href = '/leaderboard';
   } 
@@ -24,8 +25,7 @@ async function register() {
       password: document.getElementById('reg-password').value
     })
   });
-  const data = await res.json();
+  // const data = await res.json();
   alert(data.message || data.error);
 }
-
 

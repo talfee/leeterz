@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,5 +11,102 @@
   <button onclick="window.location.href = '/profile'">PROFILE</button>
 
   <script src="/static/leaderboard.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LEETERBOARD</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Jomolhari&family=Pixelify+Sans:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <!-- reuse your existing styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- top‐left and top‐right labels -->
+  <div class="page-label">LT2</div>
+  <div class="page-label" style="left:auto; right:1rem;">PROFILE</div>
+
+  <!-- main centered area -->
+  <div class="centered-container">
+
+    <!-- title + refresh button -->
+    <div style="display:flex; align-items:center; justify-content:center; gap:0.5rem; margin-bottom:2rem;">
+      <h1 class="site-title" style="margin:0;">LEETERBOARD</h1>
+      <button class="btn" onclick="loadLeaderboard()">REFRESH</button>
+    </div>
+
+    <!-- top 3 leaderboard entries -->
+    <div class="form-section">
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:0.75rem;">
+        <div style="display:flex; align-items:center;">
+          <span style="display:inline-block; width:1rem; height:1rem; background:#FDD835; margin-right:0.75rem;"></span>
+          <span>scoober03</span>
+        </div>
+        <span>21</span>
+      </div>
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:0.75rem;">
+        <div style="display:flex; align-items:center;">
+          <span style="display:inline-block; width:1rem; height:1rem; background:#B0BEC5; margin-right:0.75rem;"></span>
+          <span>talia Feng</span>
+        </div>
+        <span>13</span>
+      </div>
+      <div style="display:flex; align-items:center; justify-content:space-between;">
+        <div style="display:flex; align-items:center;">
+          <span style="display:inline-block; width:1rem; height:1rem; background:#BCAAA4; margin-right:0.75rem;"></span>
+          <span>Gnocchi</span>
+        </div>
+        <span>4</span>
+      </div>
+    </div>
+
+    <!-- detailed list -->
+    <div class="form-section">
+      <ul style="list-style:none; padding:0; margin:0;">
+        <li style="display:flex; align-items:center; justify-content:space-between; margin-bottom:0.5rem;">
+          <div style="display:flex; align-items:center;">
+            <span style="display:inline-block; width:1rem; height:1rem; background:#8BC34A; margin-right:0.5rem;"></span>
+            <span>scoober03</span>
+          </div>
+          <span>3</span>
+        </li>
+        <li style="display:flex; align-items:center; justify-content:space-between; margin-bottom:0.5rem;">
+          <div style="display:flex; align-items:center;">
+            <span style="display:inline-block; width:1rem; height:1rem; background:#8BC34A; margin-right:0.5rem;"></span>
+            <span>talia Feng</span>
+          </div>
+          <span>3</span>
+        </li>
+        <li style="display:flex; align-items:center; justify-content:space-between; margin-bottom:0.5rem;">
+          <div style="display:flex; align-items:center;">
+            <span style="display:inline-block; width:1rem; height:1rem; background:#8BC34A; margin-right:0.5rem;"></span>
+            <span>ALLCAPS</span>
+          </div>
+          <span>1</span>
+        </li>
+        <li style="display:flex; align-items:center; justify-content:space-between;">
+          <div style="display:flex; align-items:center;">
+            <span style="display:inline-block; width:1rem; height:1rem; background:#8BC34A; margin-right:0.5rem;"></span>
+            <span>CatFood</span>
+          </div>
+          <span>0</span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <script src="leaderboard.js"></script>
 </body>
 </html>
