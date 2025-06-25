@@ -1,14 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>PROFILE</title>
+  <meta charset="UTF-8">
+  <title>PROFILE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Jomolhari&family=Pixelify+Sans:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="../static/style.css">
 </head>
 <body>
-    <h1>PROFILE</h1>
-    <p>@{{ username }}</p>
-    <input id="friend-username" placeholder="Friend username">
-    <button onclick="addFriend()">ADD FRIEND</button>
-    <button onclick="window.location.href='/leaderboard'">LEADERBOARD</button>
-    <script src="/static/profile.js"></script></body>
+  <span class="page-label">
+    <a href="/">logout</a>
+  </span>
+  <span class="page-label top-right">
+    <a href="/leaderboard">LEETERBOARD</a>
+  </span>
+
+  <div class="centered-container">
+    <div class="site-title">PROFILE</div>
+
+    <div class="form-section profile-section">
+      <p class="profile-username">@{{ username }}</p>
+
+      <input id="friend-username" placeholder="Friend username">
+      <button onclick="addFriend()">ADD FRIEND</button>
+    </div>
+  </div>
+
+  <script src="../static/profile.js"></script>
+</body>
 </html>

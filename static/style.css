@@ -1,4 +1,4 @@
-/* Reset */
+Reset
 *,
 *::before,
 *::after {
@@ -76,4 +76,75 @@ body {
   border-radius: 4px;
   font-family: inherit;
   cursor: pointer;
+}
+
+/* Top‐right page label */
+.page-label.top-right {
+  left: auto;
+  right: 1rem;
+}
+.page-label.top-right a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* Title + refresh button */
+.site-title {
+  position: relative;
+  font-size: 2.5rem;
+  text-align: center;
+}
+.refresh-btn {
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1rem;
+  text-transform: lowercase;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+/* Lists reset */
+#leaderboardList,
+.legend-list {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Entry & legend rows */
+.leaderboard-entry,
+.legend-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* entry‐info wrapper */
+.entry-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* colored square */
+.color-box {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* rank colors */
+.gold   .color-box { background: #E5C07B; }
+.silver .color-box { background: #A0A0A0; }
+.bronze .color-box { background: #D19A66; }
+
+/* legend styling */
+.legend-list {
+  margin-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 1rem;
 }
